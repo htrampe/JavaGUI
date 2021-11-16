@@ -14,13 +14,13 @@ public class MainController {
     public void changeView(String target){
         System.out.println(target);
 
-        //getMainWindow().toggleMainWindow();
+        getMainWindow().toggleMainWindow();
 
         if(target == "newcarwindow"){
             new NewCarController(this);
         }
         else if(target == "mainwindow"){
-            //getMainWindow().toggleMainWindow();
+            getMainWindow().toggleMainWindow();
         }
     }
 
