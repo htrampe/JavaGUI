@@ -41,11 +41,11 @@ public class MainWindow {
 
         _createCar = new JButton("Neues Auto");
         _createCar.setBounds(0,0,0,0);
-        _createCar.addActionListener(new createCarListener());
+        _createCar.addActionListener(new createFahrzeugListener());
 
         _createLKW = new JButton("Neuer LKW");
         _createLKW.setBounds(0,0,0,0);
-        _createLKW.addActionListener(new createLKWListener());
+        _createLKW.addActionListener(new createFahrzeugListener());
 
         DefaultTableModel model = new DefaultTableModel(); 
         setCarTable(new JTable(model));
@@ -97,18 +97,13 @@ public class MainWindow {
      * 
      * Action Listener
      */
-    class createCarListener implements ActionListener {
+    class createFahrzeugListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if(e.getSource() == _createCar){
                 System.out.println("Auto erstellen - wechsle Ansicht zu newCarWindow");
                 getMainController().changeView("newcarwindow");
             }
-        }
-    }
-
-    class createLKWListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            if(e.getSource() == _createLKW){
+            else if(e.getSource() == _createLKW){
                 System.out.println("LKW erstellen - wechsle Ansicht zu newLKWWindow");
                 getMainController().changeView("newlkwwindow");
             }
