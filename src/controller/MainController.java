@@ -28,13 +28,16 @@ public class MainController {
         if(target == "newcarwindow"){
             new NewCarController(this);
         }
+        else if(target == "newlkwwindow"){
+            new NewLKWController(this);
+        }
         else if(target == "mainwindow"){
             getMainWindow().getMainFrame().setVisible(true);
             getMainWindow().updateTable();
         }
     }
 
-    public void addNewCar(Auto a){
+    public void addNewFahrzeug(Fahrzeug a){
         getFahrzeuge().add(a);
         System.out.println("Neues Auto erstellt!");
     }
