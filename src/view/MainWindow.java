@@ -24,6 +24,7 @@ public class MainWindow {
         
         // Breite und Höhe des Fensters setzen
         _mainFrame.setSize(600,400);
+        
         createMainOverview();
 
         // Standard-Operation, wenn das Fenster geschlossen wird
@@ -34,8 +35,6 @@ public class MainWindow {
         // Hauptpanel erstellen und Elemente für das MainWindow hinzufügen
         setMainPanel(new JPanel());
         getMainPanel().setLayout(new FlowLayout());
-
-        
 
         _createCar = new JButton("Neues Auto");
         _createCar.setBounds(0,0,0,0);
@@ -48,6 +47,7 @@ public class MainWindow {
         model.addColumn("Marke"); 
         model.addColumn("PS"); 
         model.addColumn("Typ"); 
+        model.addColumn("Spezial"); 
 
         getMainPanel().add(getCarTable());
         getMainPanel().add(_createCar);
@@ -64,7 +64,7 @@ public class MainWindow {
         }
 
         for(Auto a : getMainController().getAutos()){
-            model.addRow(new Object[]{a.getMarke(), a.getPs(), a.getTyp()});
+            model.addRow(new Object[]{a.getMarke(), a.getPs(), a.getTyp(), a.getSitze()});
         }
     }
 

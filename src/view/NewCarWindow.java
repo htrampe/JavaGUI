@@ -15,6 +15,7 @@ public class NewCarWindow {
     JTextField _tf_marke;
     JTextField _tf_typ;
     JTextField _tf_ps;
+    JTextField _tf_sitze;
 
     NewCarController _mc;
 
@@ -52,6 +53,14 @@ public class NewCarWindow {
         // Textfeld dem Panel hinzufügen
         getMainPanel().add(_tf_typ);
 
+        // Eingabefelder für das Auto erstellen
+        JLabel l_sitze = new JLabel("Sitze");
+        getMainPanel().add(l_sitze);
+        // Textfeld erstellen
+        _tf_sitze = new JTextField("", 15);
+        // Textfeld dem Panel hinzufügen
+        getMainPanel().add(_tf_sitze);
+
 
         _addCarBtn = new JButton("Auto speichern");
         _addCarBtn.setBounds(0,0,0,0);
@@ -85,7 +94,7 @@ public class NewCarWindow {
                 getMainFrame().setVisible(false);
 
                 // Dem Controller die Daten übergeben
-                getNewCarController().addNewCar(_tf_marke.getText(), _tf_ps.getText(), _tf_typ.getText());
+                getNewCarController().addNewCar(_tf_marke.getText(), _tf_ps.getText(), _tf_typ.getText(), _tf_sitze.getText());
             }
         }
     }

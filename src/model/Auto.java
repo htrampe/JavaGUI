@@ -1,43 +1,24 @@
 package model;
 
-public class Auto {
+public class Auto extends Fahrzeug {
     
-    String _marke;
-    int _ps;
-    String _typ;
-
-    public Auto(String marke, int ps, String typ){
-        setMarke(marke);
-        setPs(ps);
-        setTyp(typ);
+    int _sitze;
+    
+    public Auto(String marke, int ps, String typ, int sitze){
+        super(marke, ps, typ);
+        setSitze(sitze);
     }
 
     /**
      * 
      * SETTER UND GETTER
      */
-    public String getMarke() {
-        return _marke;
+
+    public int getSitze() {
+        return _sitze;
     }
 
-    public int getPs() {
-        return _ps;
+    public void setSitze(int sitze) {
+        this._sitze = sitze;
     }
-
-    public String getTyp() {
-        return _typ;
-    }
-
-    public void setMarke(String marke) {
-        this._marke = marke;
-    }
-
-    public void setPs(int ps) {
-        this._ps = ps;
-    }
-
-    public void setTyp(String typ) {
-        this._typ = typ;
-    }
-
 }

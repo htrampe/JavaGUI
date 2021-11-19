@@ -15,6 +15,7 @@ public class MainController {
         setAutos(new ArrayList<Auto>());
 
         setMainWindow(new MainWindow(this));
+        
         getMainWindow().toggleMainWindow();
     }
 
@@ -37,6 +38,7 @@ public class MainController {
         System.out.println("Neues Auto erstellt!");
     }
 
+     
     /**
      * 
      * SETTER UND GETTER
