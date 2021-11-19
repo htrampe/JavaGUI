@@ -7,6 +7,8 @@ import javax.swing.table.DefaultTableModel;
 
 import controller.MainController;
 import model.Auto;
+import model.Fahrzeug;
+import model.LKW;
 
 public class MainWindow {
     
@@ -63,8 +65,15 @@ public class MainWindow {
             model.removeRow(i);
         }
 
-        for(Auto a : getMainController().getAutos()){
-            model.addRow(new Object[]{a.getMarke(), a.getPs(), a.getTyp(), a.getSitze()});
+        for(Fahrzeug a : getMainController().getFahrzeuge()){
+            if(a instanceof Auto){
+                Auto a_temp = (Auto) a;
+                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getSitze()});
+            }
+            else if(a instanceof LKW){
+                LKW a_temp = (LKW) a;
+                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getMaxZuladung()});
+            }
         }
     }
 

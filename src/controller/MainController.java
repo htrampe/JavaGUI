@@ -3,19 +3,20 @@ package controller;
 import java.util.ArrayList;
 
 import model.Auto;
+import model.Fahrzeug;
 import view.MainWindow;
 
 public class MainController {
 
     MainWindow _mainWindow;
-    ArrayList<Auto> _autos;
+    ArrayList<Fahrzeug> _fahrzeuge;
 
 
     public MainController(){
-        setAutos(new ArrayList<Auto>());
+        setFahrzeuge(new ArrayList<Fahrzeug>());
 
         setMainWindow(new MainWindow(this));
-        
+
         getMainWindow().toggleMainWindow();
     }
 
@@ -34,7 +35,7 @@ public class MainController {
     }
 
     public void addNewCar(Auto a){
-        getAutos().add(a);
+        getFahrzeuge().add(a);
         System.out.println("Neues Auto erstellt!");
     }
 
@@ -51,12 +52,12 @@ public class MainController {
         return _mainWindow;
     }
 
-    public ArrayList<Auto> getAutos() {
-        return _autos;
+    public ArrayList<Fahrzeug> getFahrzeuge() {
+        return _fahrzeuge;
     }
 
-    public void setAutos(ArrayList<Auto> _autos) {
-        this._autos = _autos;
+    public void setFahrzeuge(ArrayList<Fahrzeug> _fahrzeuge) {
+        this._fahrzeuge = _fahrzeuge;
     }
 
 
