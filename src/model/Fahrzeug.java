@@ -1,6 +1,6 @@
 package model;
 
-public class Fahrzeug {
+public abstract class Fahrzeug {
     
     String _marke;
     int _ps;
@@ -11,6 +11,8 @@ public class Fahrzeug {
         setPs(ps);
         setTyp(typ);
     }
+
+    public abstract String getSpezial();
 
     /**
      * 

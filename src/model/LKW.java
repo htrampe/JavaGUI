@@ -20,4 +20,8 @@ public class LKW extends Fahrzeug {
     public void setMaxZuladung(int maxZuladung) {
         this._maxZuladung = maxZuladung;
     }
+
+    public String getSpezial() {
+        return "" + _maxZuladung;
+    }
 }

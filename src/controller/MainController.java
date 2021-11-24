@@ -18,6 +18,8 @@ public class MainController {
         setMainWindow(new MainWindow(this));
 
         getMainWindow().toggleMainWindow();
+
+        
     }
 
     public void changeView(String target){

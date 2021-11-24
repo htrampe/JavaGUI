@@ -21,4 +21,8 @@ public class Auto extends Fahrzeug {
     public void setSitze(int sitze) {
         this._sitze = sitze;
     }
+
+    public String getSpezial() {
+        return "" + _sitze;
+    }
 }
